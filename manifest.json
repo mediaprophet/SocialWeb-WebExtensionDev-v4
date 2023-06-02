@@ -1,0 +1,62 @@
+{
+    "manifest_version": 3,
+    "name": "Solid Reference Extension",
+    "version": "1.0",
+    "description": "Social Web Solid Reference Extension",
+    "icons": {
+      "48": "icon.png"
+    },
+    "permissions": [
+      "tabs",
+      "storage",
+      "unlimitedStorage",
+      "scripting",
+      "<all_urls>"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "options_ui": {
+      "page": "settings.html",
+      "open_in_tab": true
+    },
+    "sidebar_action": {
+      "default_panel": "dashboard.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://example.com/*"], 
+          "js": ["content.js"],
+          "css": ["overlay.css"] 
+        }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["activity.html", "overlay.html", "overlay.js", "overlay.css"],
+        "matches": ["*://*/activity.html"]
+      },
+      {
+        "resources": ["help.html"],
+        "matches": ["*://*/help.html"]
+      }
+    ],
+
+    "host_permissions": [
+      "storage",
+      "<all_urls>"
+    ]
+  }
+  

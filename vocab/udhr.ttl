@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix hr: <http://example.com/ontology/hr#>.
+
+<http://example.com/terms/udhr>
+    a hr:HumanRightsInstrument;
+    rdfs:label "Universal Declaration of Human Rights";
+    dcterms:title "Universal Declaration of Human Rights";
+    dcterms:description "The Universal Declaration of Human Rights (UDHR) is a milestone document in the history of human rights. It sets out the fundamental rights and freedoms to which all individuals are entitled.";
+    hr:hasArticle <http://example.com/terms/udhr#article1>,
+        <http://example.com/terms/udhr#article2>,
+        <http://example.com/terms/udhr#article3>,
+        ...;
+    hr:hasParty rdfs:Literal.
+
+<http://example.com/terms/udhr#article1>
+    a hr:HumanRightsArticle;
+    rdfs:label "Article 1";
+    dcterms:title "Article 1";
+    dcterms:description "All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.".
+
+<http://example.com/terms/udhr#article2>
+    a hr:HumanRightsArticle;
+    rdfs:label "Article 2";
+    dcterms:title "Article 2";
+    dcterms:description "Everyone is entitled to all the rights and freedoms set forth in this Declaration, without distinction of any kind, such as race, colour, sex, language, religion, political or other opinion, national or social origin, property, birth or other status. Furthermore, no distinction shall be made on the basis of the political, jurisdictional or international status of the country or territory to which a person belongs, whether it be independent, trust, non-self-governing or under any other limitation of sovereignty.".
+
+<http://example.com/terms/udhr#article3>
+    a hr:HumanRightsArticle;
+    rdfs:label "Article 3";
+    dcterms:title "Article 3";
+    dcterms:description "Everyone has the right to life, liberty and security of person.".

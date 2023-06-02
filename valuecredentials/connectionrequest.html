@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Connection Request</title>
+  <link rel="stylesheet" href="css/connectionRequest.css">
+</head>
+<body>
+  <h1>Connection Request</h1>
+
+  <div id="send-request-container">
+    <h2>Send Connection Request</h2>
+    <label for="recipient">Recipient:</label>
+    <input type="text" id="recipient" required>
+    <label for="terms">Terms:</label>
+    <textarea id="terms" required></textarea>
+    <button id="send-request-button">Send Request</button>
+  </div>
+
+  <div id="response-container">
+    <h2>Connection Request Response</h2>
+    <div id="request-message"></div>
+    <label for="response">Response:</label>
+    <select id="response">
+      <option value="agree">Agree</option>
+      <option value="disagree">Disagree</option>
+      <option value="modify">Modify</option>
+    </select>
+    <textarea id="additional-requests" placeholder="Enter additional requests"></textarea>
+    <button id="send-response-button">Send Response</button>
+  </div>
+
+  <div id="change-request-container">
+    <h2>Change Request</h2>
+    <textarea id="modified-terms" required></textarea>
+    <button id="initiate-change-button">Initiate Change Request</button>
+  </div>
+  
+  <script src="js/connectionRequest.js"></script>
+</body>
+</html>

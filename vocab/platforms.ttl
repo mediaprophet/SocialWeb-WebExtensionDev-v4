@@ -1,0 +1,98 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix web: <http://example.com/ontology/web2.0#>.
+@prefix schema: <http://schema.org/>.
+
+# Classes
+web:Web2Platform rdf:type rdfs:Class.
+web:Web3Platform rdf:type rdfs:Class.
+web:SocialMediaPlatform rdf:type rdfs:Class.
+web:SocialNetworkPlatform rdf:type rdfs:Class.
+web:CodingPlatform rdf:type rdfs:Class.
+web:BlockchainPlatform rdf:type rdfs:Class.
+
+# Properties
+web:belongsToCategory rdf:type rdf:Property.
+web:hasDomain rdf:type rdf:Property.
+web:hasJurisdiction rdf:type rdf:Property.
+web:hasTermsOfService rdf:type rdf:Property.
+web:hasUserAddress rdf:type rdf:Property.
+
+# Define web 2.0 platforms
+web:Facebook rdf:type web:Web2Platform;
+    web:belongsToCategory web:SocialMediaPlatform;
+    web:hasDomain "facebook.com";
+    web:hasJurisdiction "United States";
+    web:hasTermsOfService "https://www.facebook.com/terms.php".
+
+web:Twitter rdf:type web:Web2Platform;
+    web:belongsToCategory web:SocialMediaPlatform;
+    web:hasDomain "twitter.com";
+    web:hasJurisdiction "United States";
+    web:hasTermsOfService "https://twitter.com/tos".
+
+web:Instagram rdf:type web:Web2Platform;
+    web:belongsToCategory web:SocialMediaPlatform;
+    web:hasDomain "instagram.com";
+    web:hasJurisdiction "United States";
+    web:hasTermsOfService "https://help.instagram.com/581066165581870".
+
+web:LinkedIn rdf:type web:Web2Platform;
+    web:belongsToCategory web:SocialMediaPlatform;
+    web:hasDomain "linkedin.com";
+    web:hasJurisdiction "United States";
+    web:hasTermsOfService "https://www.linkedin.com/legal/user-agreement".
+
+web:GitHub rdf:type web:Web2Platform;
+    web:belongsToCategory web:CodingPlatform;
+    web:hasDomain "github.com";
+    web:hasJurisdiction "United States";
+    web:hasTermsOfService "https://docs.github.com/en/github/site-policy/github-terms-of-service".
+
+web:StackOverflow rdf:type web:Web2Platform;
+    web:belongsToCategory web:CodingPlatform;
+    web:hasDomain "stackoverflow.com";
+    web:hasJurisdiction "United States";
+    web:hasTermsOfService "https://stackoverflow.com/legal/terms-of-service".
+
+# Define web3 platforms
+web:Ethereum rdf:type web:Web3Platform;
+    web:belongsToCategory web:BlockchainPlatform;
+    web:hasDomain "ethereum.org";
+    web:hasJurisdiction "Decentralized";
+    web:hasTermsOfService "https://ethereum.org/use/#terms-of-service".
+
+web:Polkadot rdf:type web:Web3Platform;
+    web:belongsToCategory web:BlockchainPlatform;
+    web:hasDomain "polkadot.network";
+    web:hasJurisdiction "Decentralized";
+    web:hasTermsOfService "https://polkadot.network/legal/terms-of-use".
+
+web:Filecoin rdf:type web:Web3Platform;
+    web:belongsToCategory web:BlockchainPlatform;
+    web:hasDomain "filecoin.io";
+    web:hasJurisdiction "Decentralized";
+    web:hasTermsOfService "https://filecoin.io/legal/terms-of-use".
+
+# Define social network platforms
+web:Facebook rdf:type web:SocialNetworkPlatform;
+    schema:url "https://www.facebook.com".
+
+web:LinkedIn rdf:type web:SocialNetworkPlatform;
+    schema:url "https://www.linkedin.com".
+
+# Specify the coding platforms
+web:GitHub rdf:type web:CodingPlatform;
+    schema:url "https://github.com".
+
+web:StackOverflow rdf:type web:CodingPlatform;
+    schema:url "https://stackoverflow.com".
+
+web:User3 rdf:type web:UserAccount;
+    web:hasPlatform web:StackOverflow;
+    web:hasAddress "stackoverflow.com/users/userid".
+
+# Specify relationships between user accounts and platforms
+web:User1 web:hasPlatform web:LinkedIn.
+web:User2 web:hasPlatform web:GitHub.
+web:User3 web:hasPlatform web:StackOverflow.

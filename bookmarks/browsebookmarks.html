@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Browse Bookmarks</title>
+  <link rel="stylesheet" href="css/bookmarks.css">
+</head>
+<body>
+  <h1>Browse Bookmarks</h1>
+
+  <div class="search-section">
+    <h2>Search Bookmarks</h2>
+    <input type="text" id="search-input" placeholder="Search...">
+    <button id="search-button">Search</button>
+  </div>
+
+  <div class="facet-section">
+    <h2>Browse Bookmarks by Tags</h2>
+    <select id="tag-filter">
+      <option value="">All Tags</option>
+      <!-- Populate options dynamically with available tags -->
+    </select>
+    <button id="tag-filter-button">Apply Filter</button>
+  </div>
+
+  <div class="sort-section">
+    <h2>Sort Bookmarks</h2>
+    <select id="sort-by">
+      <option value="date">Date Saved</option>
+      <option value="title-asc">Title (A-Z)</option>
+      <option value="title-desc">Title (Z-A)</option>
+    </select>
+    <button id="sort-button">Sort</button>
+  </div>
+
+  <div class="results-section">
+    <h2>Results</h2>
+    <ul id="bookmark-list">
+      <!-- Populate with bookmark items dynamically -->
+    </ul>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bookmarks.js"></script>
+</body>
+</html>

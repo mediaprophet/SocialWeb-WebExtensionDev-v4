@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Create Semantic Bookmark</title>
+  <link rel="stylesheet" href="css/bookmark.css">
+</head>
+<body>
+  <h1>Create Semantic Bookmark</h1>
+
+  <form id="bookmark-form">
+    <label for="website">Website:</label>
+    <input type="text" id="website" required>
+    <label for="uri">Web Page URI:</label>
+    <input type="text" id="uri" required>
+    <label for="schema-info">Schema.org Information:</label>
+    <textarea id="schema-info" required></textarea>
+    <label for="notes">Notes:</label>
+    <textarea id="notes"></textarea>
+    <label for="tags">Tags:</label>
+    <input type="text" id="tags">
+    <button type="submit">Save Bookmark</button>
+  </form>
+
+  <script src="js/bookmark.js"></script>
+</body>
+</html>

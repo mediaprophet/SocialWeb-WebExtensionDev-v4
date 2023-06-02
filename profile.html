@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+  <h1>Edit Profile</h1>
+
+  <form id="profile-form">
+    <div id="sections-container">
+      <!-- Initial section -->
+      <div class="section">
+        <h2>Personal Information</h2>
+        <div class="fields-container">
+          <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="field">
+            <label for="bio">Bio:</label>
+            <textarea name="bio"></textarea>
+          </div>
+          <div class="field">
+            <label for="homepage">Homepage:</label>
+            <input type="url" name="homepage">
+          </div>
+          <!-- Add more fields based on the RDF ontologies -->
+        </div>
+        <button class="add-field">Add Field</button>
+      </div>
+    </div>
+    
+    <button class="add-section">Add Section</button>
+    <button class="remove-section">Remove Section</button>
+    <button type="submit">Save</button>
+  </form>
+
+  <script src="js/rdf.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

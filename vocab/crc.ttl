@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix crc: <http://example.com/ontology/crc#>.
+
+<http://example.com/terms/crc>
+    a crc:HumanRightsInstrument;
+    rdfs:label "Convention on the Rights of the Child";
+    dcterms:title "Convention on the Rights of the Child";
+    dcterms:description "The Convention on the Rights of the Child (CRC) is an international human rights treaty that sets out the civil, political, economic, social, health, and cultural rights of children.";
+    crc:hasArticle <http://example.com/terms/crc#article1>,
+        <http://example.com/terms/crc#article2>,
+        <http://example.com/terms/crc#article3>,
+        ...;
+    crc:hasParty rdfs:Literal.
+
+<http://example.com/terms/crc#article1>
+    a crc:HumanRightsArticle;
+    rdfs:label "Article 1";
+    dcterms:title "Article 1";
+    dcterms:description "For the purposes of the present Convention, a child means every human being below the age of eighteen years unless under the law applicable to the child, majority is attained earlier.".
+
+<http://example.com/terms/crc#article2>
+    a crc:HumanRightsArticle;
+    rdfs:label "Article 2";
+    dcterms:title "Article 2";
+    dcterms:description "States Parties shall respect and ensure the rights set forth in the present Convention to each child within their jurisdiction without discrimination of any kind, irrespective of the child's or his or her parent's or legal guardian's race, colour, sex, language, religion, political or other opinion, national, ethnic or social origin, property, disability, birth or other status.".
+
+<http://example.com/terms/crc#article3>
+    a crc:HumanRightsArticle;
+    rdfs:label "Article 3";
+    dcterms:title "Article 3";
+    dcterms:description "In all actions concerning children, whether undertaken by public or private social welfare institutions, courts of law, administrative authorities or legislative bodies, the best interests of the child shall be a primary consideration.".

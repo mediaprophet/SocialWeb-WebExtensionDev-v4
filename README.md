@@ -1,0 +1,1 @@
+# Inrupt Solid Browser Extension
