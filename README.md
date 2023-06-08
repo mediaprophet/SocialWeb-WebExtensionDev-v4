@@ -26,9 +26,9 @@ WIP.
     - [ ] social
         - [ ] Value-Credentials
         - [ ] Social Graph
-        - [ ] 
+        - [ ] Chat
+        - [ ] 'timeline' like interface
     - [ ] General (inc. work) 
         - [ ] time tracker
         - [ ] Projects
         - [ ] Timeline View
-    
