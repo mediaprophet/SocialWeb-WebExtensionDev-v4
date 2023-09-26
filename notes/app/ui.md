@@ -12,7 +12,7 @@ Part of the hope with this project, is that UI Tool-kit producers, can produce a
 
 An old example (2015) for social is: http://dev.webcivics.org/  use dummy data on the form. 
 
-An old exmaple for work stuff-  that is incomplete - is https://webcivics.github.io/CooperativeProjects/ 
+An old example for work stuff-  that is incomplete - is https://webcivics.github.io/CooperativeProjects/ 
 
 ## Others
 

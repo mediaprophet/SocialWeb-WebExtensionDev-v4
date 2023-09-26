@@ -1,0 +1,65 @@
+@prefix ex: <http://example.org/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+# Define our actions or conditions
+ex:benefitGiven a rdf:Property;
+    rdfs:label "Benefit Given";
+    ex:associatedEmoji "🎉" .
+
+ex:penaltyGiven a rdf:Property;
+    rdfs:label "Penalty Given";
+    ex:associatedEmoji "⛔" .
+
+ex:remediationStarted a rdf:Property;
+    rdfs:label "Remediation Process Started";
+    ex:associatedEmoji "🔄" .
+
+ex:falseBeliefIdentified a rdf:Property;
+    rdfs:label "False Belief Identified";
+    ex:associatedEmoji "❌" .
+
+ex:remediationSuccessful a rdf:Property;
+    rdfs:label "Remediation Process Successful";
+    ex:associatedEmoji "✅" .
+
+ex:remediationFailed a rdf:Property;
+    rdfs:label "Remediation Process Failed";
+    ex:associatedEmoji "❗" .
+
+# Sample instances to demonstrate the associations
+ex:John ex:benefitGiven "2023-09-24" .
+ex:Jane ex:penaltyGiven "2023-09-25" .
+
+# As the network grows, more actions or conditions can be linked with their respective emojis. 
+# Users or agents can then utilize SPARQL or other querying mechanisms to extract the emojis based on certain conditions.
+# Additional action or conditions 
+
+ex:supportiveAction a rdf:Property;
+    rdfs:label "Supportive Action for Mission and Code of Conduct";
+    ex:associatedEmoji "🤝" .
+
+ex:infringementDetected a rdf:Property;
+    rdfs:label "Infringement on Values Detected";
+    ex:associatedEmoji "🚫" .
+
+ex:correctiveFeedbackGiven a rdf:Property;
+    rdfs:label "Feedback Given for Corrective Measures";
+    ex:associatedEmoji "📝" .
+
+ex:collaborationStarted a rdf:Property;
+    rdfs:label "Collaboration Started for Mission";
+    ex:associatedEmoji "🌐" .
+
+ex:educationalInitiativeStarted a rdf:Property;
+    rdfs:label "Educational Initiative Started";
+    ex:associatedEmoji "📚" .
+
+# Sample instances to demonstrate the associations
+ex:Alice ex:supportiveAction "2023-09-27" .
+ex:Bob ex:infringementDetected "2023-09-28" .
+ex:Charlie ex:correctiveFeedbackGiven "2023-09-29" .
+ex:Diana ex:collaborationStarted "2023-10-01" .
+ex:Edward ex:educationalInitiativeStarted "2023-10-02" .
+
+# Further expansion can be done by introducing new actions/conditions and their associated emojis.
