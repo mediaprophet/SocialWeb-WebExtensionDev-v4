@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solid Profile Editor</title>
+    <script src="https://cdn.jsdelivr.net/npm/solid-auth-client/dist/solid-auth-client.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rdflib/dist/rdflib.min.js"></script>
+</head>
+<body>
+    <h1>Solid Profile Editor</h1>
+    <button id="loginButton">Log In</button>
+    <form id="profileForm" style="display: none;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <button type="submit">Save Profile</button>
+    </form>
+
+    <script src="profile.js"></script>
+</body>
+</html>
