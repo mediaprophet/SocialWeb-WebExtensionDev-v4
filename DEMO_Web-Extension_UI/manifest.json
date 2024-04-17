@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "Solid Login Extension",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "storage",
+      "unlimitedStorage"
+
+    ],
+
+    "options_page": "admin.html",
+
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "browser_action": {
+      "default_title": "Solid",
+      "default_popup": "popup.html"
+
+    },
+    "sidebar_action": {
+      "default_title": "Social Sidebar",
+      "default_panel": "sidebar.html",
+      "default_icon": "social.png"
+
+    },
+    "icons": {
+      "48": "solid-emblem.svg"
+    },
+    "applications": {
+      "gecko": {
+        "id": "solid-login-extension@example.com"
+      }
+    }
+  }
+  
